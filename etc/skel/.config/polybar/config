@@ -1,6 +1,6 @@
 [colors]
-background = #17171a
-foreground = #676b73 
+background = #14171d
+foreground = #cbcbcb 
 ;foreground = ${xrdb:foreground}
 
 dark-light = #272A2B 
@@ -8,31 +8,31 @@ active-light = #313435
 
 [bar/example]
 tray-position = right
-tray-background = #17171a
+tray-background = #9e071e
 monitor = 
 width =  100%
 height = 30
 padding-left = 1
-padding-right = 1
+padding-right = 0
 ;offset-x = 0.5%
 ;offset-y = 0.5%
 ;radius = 16
 
-background = #17171a
-foreground = ${colors.foreground}
+background = #14171d
+foreground = #cbcbcb
 top = true
 border-top-size = 6
 border-bottom-size = 6
 border-radius = 16
-border-top-color = #17171a
-border-bottom-color = #17171a
+border-top-color = #14171d
+border-bottom-color = #14171d
 
 line-size = 1
-wm-restack = bspwm
+wm-restack = i3
 
-modules-left = round-left workspaces round-right empty-space round-left title round-right
-modules-center = space time emtpy-space
-modules-right = round-left cpu memory round-right empty-space round-left pulseaudio battery round-right
+modules-left = round-left workspaces round-right empty-space roundd-left title roundd-right
+modules-center = space round-left time round-right emtpy-space
+modules-right = roundd-left cpu memory roundd-right empty-space round-left pulseaudio battery round-right empty-space roundd-left
 font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3
 font-1 = JetBrainsMono Nerd Font:size= 20;5
 font-2 = Material Design Icons:style=Bold:size=9;3
@@ -49,29 +49,29 @@ content = "      "
 [module/round-left]
 type = custom/text
 content = %{T3}%{T-}
-content-foreground = #2a2e36
+content-foreground = #068411
 
 [module/round-right]
 type = custom/text
 content = %{T3}%{T-}
-content-foreground = #2a2e36
+content-foreground = #068411
 
 [module/roundd-left]
 type = custom/text
-content = %{T3}%{`T-}
-content-foreground = #2a2e36 
+content = %{T3}%{T-}
+content-foreground = #9e071e 
 
 [module/roundd-right]
 type = custom/text
 content = %{T3}%{T-}
-content-foreground = #2a2e36
+content-foreground = #9e071e
 
 [module/time]
 type = internal/date
 interval = 60
 
-format = <label>
-format-background = #17171a
+fort = <label>
+format-background = #068411
 format-foreground = #D8DEE9
 
 ;date = 󰥔 %H:%M%{F-}
@@ -85,7 +85,7 @@ type = internal/memory
 interval = 2
 format-prefix = " ﬙ " 
 format-prefix-foreground = #D8DEE9
-format-background = #2a2e36
+format-background = #9e071e
 format-foreground = #FFFFFF
 format = <label>
 label = %mb_used%
@@ -108,16 +108,16 @@ poll-interval = 2
 time-format = %H:%M
 
 format-charging = <animation-charging>  <label-charging>
-format-charging-background = #2a2e36
+format-charging-background = #068411
 format-charging-foreground = #D8DEE9
 format-charging-padding = 0
 format-discharging = <ramp-capacity>  <label-discharging>
-format-discharging-background = #2a2e36
+format-discharging-background = #068411
 format-discharging-foreground = #D8DEE9
 format-discharging-padding = 0
 format-full =<label-full>
 format-full-prefix = "   "
-format-full-background = #2a2e36
+format-full-background = #068411
 format-full-foreground = #FFFFFF
 format-full-padding = 0
 label-charging = "%percentage%%"
@@ -145,7 +145,7 @@ format-prefix = " "
 label = %percentage%
 format-prefix-foreground = #D8DEE9
 label-foreground = #D8DEE9
-format-background = #2a2e36
+format-background = #068411
 format-padding = 1
 
 [module/cpu]
@@ -156,13 +156,13 @@ format =  <label>
 format-prefix-foreground = #FFFFFF
 label = "%percentage%% "
 label-padding = 0
-format-background = #2a2e36
+format-background = #9e071e
 format-foreground = #FFFFFF
 
 [module/title]
 type = internal/xwindow
 format = <label>
-format-background = #2a2e36
+format-background = #9e071e
 format-foreground = #FFFFFF
 format-padding = 0
 label = "%title%"
@@ -177,12 +177,12 @@ sink = alsa_output.pci-0000_03_00.6.analog-stereo
 interval = 5
 
 format-volume = <ramp-volume> <label-volume>
-format-volume-background = #2a2e36
+format-volume-background = #068411
 format-volume-padding = 1
 format-volume-foreground = #FFFFFF
 format-muted = <label-muted>
 format-muted-prefix = "婢 "
-format-muted-background = #2a2e36
+format-muted-background = #068411
 format-muted-padding = 1
 format-muted-prefix-foreground = #D8DEE9
 
@@ -211,16 +211,16 @@ label-monitor = %name%
 
 label-active = 
 label-active-foreground = #D8DEE9
-label-active-background = #2a2e36
+label-active-background = #068411
 label-occupied = 
 label-occupied-foreground = #D8DEE9
-label-occupied-background = #2a2e36
+label-occupied-background = #068411
 label-urgent = 
 label-urgent-foreground = #D8DEE9
-label-urgent-background = #2a2e36
+label-urgent-background = #068411
 label-empty = 
 label-empty-foreground = #D8DEE9
-label-empty-background = #2a2e36
+label-empty-background = #068411
 
 label-active-padding = 2
 label-urgent-padding = 1
