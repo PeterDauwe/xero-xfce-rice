@@ -30,7 +30,7 @@ border-bottom-color = #14171d
 line-size = 1
 wm-restack = i3
 
-modules-left = round-left workspaces round-right empty-space roundd-left title roundd-right
+modules-left = jgmenu round-left workspaces round-right empty-space roundd-left title roundd-right
 modules-center = space round-left time round-right emtpy-space
 modules-right = roundd-left cpu memory roundd-right empty-space round-left pulseaudio battery round-right empty-space roundd-left
 font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3
@@ -41,6 +41,14 @@ font-3 = unifont:fontformat=truetype:size=9;3
 [module/empty-space]
 type = custom/text
 content = " "
+
+[module/jgmenu]
+type = custom/script
+interval = 120
+exec = echo "  "
+click-left = "jgmenu_run >/dev/null 2>&1 &"
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
 
 [module/space]
 type = custom/text
