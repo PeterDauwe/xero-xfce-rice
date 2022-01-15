@@ -25,9 +25,12 @@ include-file = ~/.config/polybar/modules.ini
 
 [colors]
 background = #14171d
+#### If you put 00 at the end it changes the transparency
+#### so  background = #14171d00  = total transparent
+#### and background = #14171d55  = is less transparent
+################################################################################################################### 
 foreground = #cbcbcb 
 ;foreground = ${xrdb:foreground}
-
 dark-light = #272A2B 
 active-light = #313435
 
@@ -38,6 +41,10 @@ tray-position = right
 tray-background = #6240ae
 monitor = 
 width =  100%
+########  If you want your bar smaller then your screen 
+########  you set width = 90% BUT!!!!!!!
+########  your offset-x must be 5%  (10% devided by 2 sides , left and right , otherwise your bar will be in the leftcorner and the right side not , 10% less)
+#############################################################################################################################################
 height = 30
 padding-left = 1
 padding-right = 0
@@ -45,14 +52,25 @@ padding-right = 0
 ;offset-y = 0.5%
 ;radius = 16
 
-background = #14171d
-foreground = #cbcbcb
+
+################ these next 2 lines must change because you already dedicated the colors 
+#background = #14171d
+#foreground = #cbcbcb
+#  change them into : 
+background = ${colors.background}
+foreground = ${colors.foreground}
+############################################################################
+
 top = true
-border-top-size = 6
-border-bottom-size = 6
-border-radius = 16
-border-top-color = #14171d
-border-bottom-color = #14171d
+
+### only for bottom , delete these lines
+#border-top-size = 6
+#border-bottom-size = 6
+#border-radius = 16
+#border-top-color = #14171d
+#border-bottom-color = #14171d
+################################################################################
+
 
 line-size = 1
 wm-restack = i3
@@ -61,8 +79,21 @@ modules-left = jgmenu round-left workspaces round-right empty-space roundd-left 
 modules-center = space round-left time round-right emtpy-space
 modules-right = roundd-left cpu memory roundd-right empty-space round-left pulseaudio battery round-right empty-space roundd-left
 
+########## Here you must these fonts have installed otherwise you will have a no go
+##### in modules the roundd-left icon is from SauceCodePro Nerd , that is why it is not displayed right
+########################################################################################################################
 
-font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3
-font-1 = JetBrainsMono Nerd Font:size= 20;5
-font-2 = Material Design Icons:style=Bold:size=9;3
-font-3 = unifont:fontformat=truetype:size=9;3
+#font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3
+#font-1 = JetBrainsMono Nerd Font:size= 20;5
+#font-2 = Material Design Icons:style=Bold:size=9;3
+#font-3 = unifont:fontformat=truetype:size=9;3
+
+
+#####Experiment with fonts - use the fontmanager to get the right icons
+font-0 = "SauceCodePro Nerd Font:size=11:weight=semibold;3"
+font-1 = "Noto Sans Mono:size=10;0"
+font-2 = "FontAwesome:size=10;0"
+font-3 = "Noto Sans:size=14;0"
+
+
+##########################################################################################################
